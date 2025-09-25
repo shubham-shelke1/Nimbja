@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import home2 from "../../assets/home2.jpg"; // adjust path if needed
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -33,12 +34,14 @@ const Home = () => {
         </p>
 
         {/* Button */}
-        <motion.button
-          className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:opacity-90 transition"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          All Solution →
+        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Link
+            to="/aboutus"
+            className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:opacity-90 transition inline-block"
+          >
+            All Solution →
+          </Link>
+
         </motion.button>
       </motion.div>
     </div>

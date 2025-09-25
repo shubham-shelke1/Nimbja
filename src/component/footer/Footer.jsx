@@ -73,7 +73,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="border-t border-gray-900 mt-10 pt-4 text-center text-lg text-sky-500">
-        © 2025 Nimbja Security Solutions Pvt. Ltd. Pune. All Rights Reserved.
+        © 2025 Nimbja Security Solutions Pvt. Ltd. All Rights Reserved.
       </div>
     </footer>
   );

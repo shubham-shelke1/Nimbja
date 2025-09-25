@@ -8,6 +8,9 @@ import CaseStudy from '../component/home/Casestudy'
 import Testimonial from '../component/home/Testinomial'
 import Form from '../component/home/Form'
 import Footer from '../component/footer/Footer'
+import Blog from '../component/home/Blog'
+import Year from '../component/home/Year'
+
 
 const HomePage = () => {
   return (
@@ -15,11 +18,14 @@ const HomePage = () => {
 <Navbar/>
 <Home/>
 <Course/>
+<Year/>
 <Creative/>
 <Services/>
 <CaseStudy/>
 <Testimonial/>
+<Blog/>
 <Form/>
+
 <Footer/>
 
 

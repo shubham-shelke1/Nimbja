@@ -5,26 +5,21 @@ import { MdEmail } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
-import logo from "../../assets/logo.png"; // adjust path if needed
-
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  
 
   return (
-    <div>
+    <div className="sticky top-0 z-50 w-full bg-white shadow">
       {/* 🔹 Top bar */}
       <div className="bg-[#2d312f] text-white flex flex-col sm:flex-row sm:items-center sm:justify-between px-4 sm:px-6 py-2 text-xs sm:text-sm space-y-2 sm:space-y-0">
         {/* Left - Contact info */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-2 sm:space-y-0">
           <div className="flex items-center space-x-2">
             <FaPhoneAlt />
-            <a
-              href="tel:02027212597"
-              className="hover:underline text-blue-400"
-            >
+            <a href="tel:02027212597" className="hover:underline text-blue-400">
               020-272 12 597
             </a>
           </div>
@@ -65,16 +60,12 @@ const Navbar = () => {
       </div>
 
       {/* 🔹 Main Navbar */}
-      <div className="flex items-center justify-between px-4 sm:px-6 py-3 shadow-md bg-white">
+      <div className="flex items-center justify-between px-4 sm:px-6 py-3 bg-white">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <Link to="/">
-  <img
-    src={logo}
-    alt="logo"
-    className="h-8 sm:h-10"
-  />
-</Link>
+            <img src={logo} alt="logo" className="h-8 sm:h-12" />
+          </Link>
           <span className="text-green-600 font-bold text-sm sm:text-lg whitespace-nowrap">
             Nimbja Security Solutions Pvt Ltd
           </span>
@@ -87,53 +78,52 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-         <li className="relative">
-  {/* Dropdown Trigger */}
-  <button
-    className="flex items-center text-black hover:text-green-600 focus:outline-none"
-    onMouseEnter={() => setServicesOpen(true)}
-    onMouseLeave={() => setServicesOpen(false)}
-  >
-    IT Services ▾
-  </button>
 
-  {/* Dropdown Menu */}
-  {servicesOpen && (
-    <div
-      className="absolute left-0 mt-2 bg-white shadow-lg rounded-md z-50 w-64"
-      onMouseEnter={() => setServicesOpen(true)}
-      onMouseLeave={() => setServicesOpen(false)}
-    >
-      <ul className="py-2">
-        <li>
-          <Link
-            to="/services/service1"
-            className="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition"
+          <li
+            className="relative"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
           >
-            Software Development Application
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/services/service2"
-            className="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition"
-          >
-            Software Testing - Manual & Automation
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/services/service3"
-            className="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition"
-          >
-            Mobile Development & Testing
-          </Link>
-        </li>
-      </ul>
-    </div>
-  )}
-</li>
+            <button className="flex items-center text-black hover:text-green-600 focus:outline-none">
+              IT Services ▾
+            </button>
 
+            {/* Dropdown */}
+            <div
+              className={`absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md z-50 transform transition-all duration-300 ease-out ${
+                servicesOpen
+                  ? "opacity-100 translate-y-0 visible"
+                  : "opacity-0 -translate-y-2 invisible"
+              }`}
+            >
+              <ul className="py-2">
+                <li>
+                  <Link
+                    to="/software"
+                    className="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition"
+                  >
+                    Software Development Application
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/testing"
+                    className="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition"
+                  >
+                    Software Testing - Manual & Automation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/mobile"
+                    className="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition"
+                  >
+                    Mobile Development & Testing
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </li>
 
           <li>
             <Link to="/aboutus" className="hover:text-green-600">
@@ -141,12 +131,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/career" className="hover:text-green-600">
-              Career
+            <Link to="/carrer" className="hover:text-green-600">
+              Carrier
             </Link>
           </li>
           <li>
-            <Link to="/health" className="hover:text-green-600">
+            <Link to="/us" className="hover:text-green-600">
               US Health Care
             </Link>
           </li>
@@ -157,11 +147,6 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* CTA Button (hidden on mobile) */}
-        <button className="hidden sm:inline bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 sm:px-5 py-2 rounded-md font-medium hover:opacity-90">
-          Let’s get started
-        </button>
-
         {/* Hamburger (mobile only) */}
         <button
           className="lg:hidden text-2xl text-gray-700"
@@ -171,13 +156,14 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* 🔹 Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden bg-white shadow-md px-4 py-4 space-y-3 font-medium">
           <Link to="/" className="block text-blue-600">
             Home
           </Link>
 
+          {/* Mobile Dropdown */}
           <button
             className="flex items-center justify-between w-full"
             onClick={() => setServicesOpen(!servicesOpen)}
@@ -186,38 +172,30 @@ const Navbar = () => {
           </button>
           {servicesOpen && (
             <div className="ml-4 space-y-2">
-              <Link to="/services/service1" className="block hover:text-green-600">
+              <Link to="/software" className="block hover:text-green-600">
                 Software Development Application
               </Link>
-              <Link to="/services/service2" className="block hover:text-green-600">
+              <Link to="/testing" className="block hover:text-green-600">
                 Software Testing - Manual & Automation
               </Link>
-              <Link to="/services/service3" className="block hover:text-green-600">
+              <Link to="/mobile" className="block hover:text-green-600">
                 Mobile Development & Testing
               </Link>
             </div>
           )}
 
-          <Link to="/solutions" className="block hover:text-green-600">
-            Solutions
-          </Link>
           <Link to="/aboutus" className="block hover:text-green-600">
             About Us
           </Link>
-          <Link to="/career" className="block hover:text-green-600">
-            Career
+          <Link to="/carrer" className="block hover:text-green-600">
+            Carrier
           </Link>
-          <Link to="/health" className="block hover:text-green-600">
+          <Link to="/us" className="block hover:text-green-600">
             US Health Care
           </Link>
           <Link to="/contact" className="block hover:text-green-600">
             Contact
           </Link>
-
-          {/* CTA in mobile */}
-          <button className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 rounded-md font-medium hover:opacity-90">
-            Let’s get started
-          </button>
         </div>
       )}
     </div>

@@ -1,9 +1,11 @@
 import React from 'react'
+import Service from '../component/services/Service'
 
 const ServicesPage = () => {
   return (
-    <div>ServicesPage</div>
-  )
+<>
+
+</>  )
 }
 
 export default ServicesPage

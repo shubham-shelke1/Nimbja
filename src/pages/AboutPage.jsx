@@ -1,14 +1,17 @@
 import React from 'react'
 import Navbar from '../component/navbar/Navbar'
-import About from '../component/about/About'
-import HomePage from './HomePage'
+import Aboutus from '../component/about/Aboutus'
+import Footer from '../component/footer/Footer'
+import Form from '../component/home/Form'
 
 const AboutPage = () => {
   return (
 <>
 <Navbar/>
+<Aboutus/>
+<Form/>
+<Footer/>
 {/* <About/> */}
-<HomePage/>
 
 
 </>  )
