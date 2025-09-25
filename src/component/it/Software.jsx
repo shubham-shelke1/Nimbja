@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import AD from "../../assets/AD.jpg"; // ✅ Application Development image
-import WEB from "../../assets/WEB.jpg"; // ✅ Web Development image
+import AD from "../../assets/ad.jpg"; // ✅ Application Development image
+import WEB from "../../assets/web.jpg"; // ✅ Web Development image
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },

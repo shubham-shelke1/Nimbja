@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 // ✅ Import only RPA image
 import rpa from "../../assets/RPA.jpg";
 import Maintaince from "../../assets/maintaince.jpg";
-import data from "../../assets/Datascience.jpg";
+import data from "../../assets/datascience.jpg";
 import ui from "../../assets/ui.jpg";
 import cloud from "../../assets/cloud.jpg";
 import cyber from "../../assets/cyber.jpg";

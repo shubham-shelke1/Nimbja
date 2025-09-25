@@ -1,8 +1,8 @@
 // Blog.jsx
 import React from "react";
-import Blog1 from "../../assets/Blog1.jpg"; // adjust path if needed
-import Blog2 from "../../assets/Blog2.jpg"; // adjust path if needed
-import Blog3 from "../../assets/Blog3.jpg"; // if you have a third image
+import Blog1 from "../../assets/blog1.jpg"; // adjust path if needed
+import Blog2 from "../../assets/blog2.jpg"; // adjust path if needed
+import Blog3 from "../../assets/blog3.jpg"; // if you have a third image
 
 const blogPosts = [
   {

@@ -1,7 +1,7 @@
 // Testing.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import TESTING from "../../assets/TESTING.jpg"; // ✅ replace with your actual image
+import TESTING from "../../assets/testing.jpg"; // ✅ replace with your actual image
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
