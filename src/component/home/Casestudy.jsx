@@ -1,7 +1,7 @@
 import React from "react";
-import TechImg from "../../assets/Tech.jpg";
-import Case2 from "../../assets/case2.jpg";
-import Case3 from "../../assets/Case3.jpg";
+import techImg from "../../assets/tech.jpg";
+import case2 from "../../assets/case2.jpg";
+import case3 from "../../assets/case3.jpg";
 import { FaArrowRight } from "react-icons/fa"; // Using FontAwesome arrow icon
 
 const caseStudies = [
@@ -9,19 +9,19 @@ const caseStudies = [
     id: 1,
     category: "Technology",
     title: "When viruses attack so does template’s IT",
-    image: TechImg,
+    image: techImg,
   },
   {
     id: 2,
     category: "Technology",
     title: "Subscription licensing unlocks spike in IT orders",
-    image: Case2,
+    image: case2,
   },
   {
     id: 3,
     category: "Technology",
     title: "Ideas for application development and scaling",
-    image: Case3,
+    image: case3,
   },
 ];
 

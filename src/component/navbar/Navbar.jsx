@@ -74,7 +74,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center space-x-6 font-semibold">
           <li>
-            <Link to="/" className="text-blue-600 hover:text-green-600">
+            <Link to="/" className="text-black-600 hover:text-green-600">
               Home
             </Link>
           </li>
