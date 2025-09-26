@@ -14,57 +14,22 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-50 w-full bg-white shadow">
       {/* 🔹 Top bar */}
-      <div className="bg-[#2d312f] text-white flex flex-col sm:flex-row sm:items-center sm:justify-between px-4 sm:px-6 py-2 text-xs sm:text-sm space-y-2 sm:space-y-0">
+      {/* <div className="bg-[#2d312f] text-white flex flex-col sm:flex-row sm:items-center sm:justify-between px-4 sm:px-6 py-2 text-xs sm:text-sm space-y-2 sm:space-y-0"> */}
         {/* Left - Contact info */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-2 sm:space-y-0">
-          <div className="flex items-center space-x-2">
-            <FaPhoneAlt />
-            <a href="tel:02027212597" className="hover:underline text-blue-400">
-              020-272 12 597
-            </a>
-          </div>
 
-          <div className="flex items-center space-x-2">
-            <MdEmail />
-            <a
-              href="mailto:hr@nimbjasolution.com"
-              className="hover:underline text-blue-400"
-            >
-              hr@nimbjasolution.com
-            </a>
-          </div>
+
+
         </div>
-
-        {/* Right - Search & Links */}
-        <div className="flex items-center space-x-4">
-          {/* Search Bar */}
-          <div className="relative w-40 sm:w-72">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full pl-4 pr-10 py-1.5 sm:py-2 rounded-full border border-gray-400 bg-transparent text-white placeholder-gray-300 focus:outline-none focus:border-white text-xs sm:text-sm"
-            />
-            <FiSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white text-sm sm:text-lg" />
-          </div>
-
-          <a href="#" className="hidden sm:inline hover:underline">
-            Help Center
-          </a>
-          <a href="#" className="hidden sm:inline hover:underline">
-            Privacy Policy
-          </a>
-          <a href="#" className="hidden sm:inline hover:underline">
-            Sitemap
-          </a>
-        </div>
-      </div>
+      {/* </div> */}
 
       {/* 🔹 Main Navbar */}
-      <div className="flex items-center justify-between px-4 sm:px-6 py-3 bg-white">
+<div className="flex items-center justify-between px-4 sm:px-6 py-3 bg-gradient-to-r from-[#006D5B] to-[#0A192F]
+ text-white">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <Link to="/">
-            <img src={logo} alt="logo" className="h-8 sm:h-12" />
+            <img src={logo} alt="logo" className="h-9 sm:h-14" />
           </Link>
           <span className="text-green-600 font-bold text-sm sm:text-lg whitespace-nowrap">
             Nimbja Security Solutions Pvt Ltd
@@ -84,7 +49,7 @@ const Navbar = () => {
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <button className="flex items-center text-black hover:text-green-600 focus:outline-none">
+            <button className="flex items-center text-white hover:text-green-600 focus:outline-none">
               IT Services ▾
             </button>
 

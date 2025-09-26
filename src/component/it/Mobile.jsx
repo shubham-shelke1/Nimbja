@@ -1,7 +1,7 @@
 // Mobile.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import MOBILE from "../../assets/MOBILE.jpg"; // ✅ replace with your image
+import MOBILE from "../../assets/mobile.jpg"; // ✅ replace with your image
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
