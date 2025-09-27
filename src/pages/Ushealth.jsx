@@ -1,15 +1,15 @@
 import React from 'react'
-import Us from '../component/us/us'
+import Health from '../component/ushealth/Health'
 import Navbar from '../component/navbar/Navbar'
 import Footer from '../component/footer/Footer'
 
-const UsPage = () => {
+const Ushealth = () => {
   return (
 <>
 <Navbar/>
-<Us/>
+<Health/>
 <Footer/>
 </>  )
 }
 
-export default UsPage
+export default Ushealth

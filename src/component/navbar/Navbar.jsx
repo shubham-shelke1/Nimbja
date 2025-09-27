@@ -31,7 +31,7 @@ const Navbar = () => {
           <Link to="/">
             <img src={logo} alt="logo" className="h-9 sm:h-14" />
           </Link>
-          <span className="text-green-600 font-bold text-sm sm:text-lg whitespace-nowrap">
+          <span className="text-white font-bold text-sm sm:text-2xl whitespace-nowrap">
             Nimbja Security Solutions Pvt Ltd
           </span>
         </div>
@@ -97,11 +97,11 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/carrer" className="hover:text-green-600">
-              Carrier
+              Carrer
             </Link>
           </li>
           <li>
-            <Link to="/us" className="hover:text-green-600">
+            <Link to="/ushealth " className="hover:text-green-600">
               US Health Care
             </Link>
           </li>
@@ -155,7 +155,7 @@ const Navbar = () => {
           <Link to="/carrer" className="block hover:text-green-600">
             Carrier
           </Link>
-          <Link to="/us" className="block hover:text-green-600">
+          <Link to="/ushealth" className="block hover:text-green-600">
             US Health Care
           </Link>
           <Link to="/contact" className="block hover:text-green-600">

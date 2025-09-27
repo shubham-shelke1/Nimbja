@@ -134,7 +134,7 @@ export default function Career() {
             </motion.div>
           ))}
         </motion.div>
-
+          
         {/* Apply Form */}
         <motion.div
           className="max-w-3xl mx-auto mt-24 bg-white/10 backdrop-blur-md border border-gray-700 rounded-2xl p-10 shadow-xl"

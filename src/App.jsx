@@ -7,8 +7,9 @@ import ContactPage from "./pages/ContactPage";
 import SoftwarePage from "./pages/SoftwarePage";
 import TestingPage from "./pages/TestingPage";
 import MobilePage from "./pages/MobilePage";
-import UsPage from "./pages/UsPage";
 import CarrerPage from "./pages/CarrerPage";
+import Applyform from "./component/career/Applyform";
+import Ushealth from "./pages/Ushealth";
 
 function App() {
   return (
@@ -20,8 +21,15 @@ function App() {
       <Route path="/software" element={<SoftwarePage />} />
       <Route path="/testing" element={<TestingPage />} />
       <Route path="/mobile" element={<MobilePage />} />
-      <Route path="/us" element={<UsPage />} />
       <Route path="/carrer" element={<CarrerPage />} />
+            <Route path="/testing" element={<TestingPage />} />
+      <Route path="/ushealth" element={<Ushealth />} />
+
+            {/* <Route path="/applyform" element={<Applyform />} /> */}
+
+      
+      
+  
     </Routes>
     // {/* </BrowserRouter> */}
   );

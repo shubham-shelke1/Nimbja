@@ -25,7 +25,7 @@ const Home = () => {
         <h1 className="text-4xl sm:text-6xl font-light leading-snug mb-6 text-gray-100">
           A highly experienced <br />
           <span className="font-extrabold text-white drop-shadow-lg">
-            Team of IT professionals.
+            Team of IT Professionals.
           </span>
         </h1>
 
