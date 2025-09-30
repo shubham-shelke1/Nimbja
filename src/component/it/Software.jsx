@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import AD from "../../assets/ad.jpg"; // ✅ Application Development image
+import ad from "../../assets/ad.jpg"; // ✅ Application Development image
 import WEB from "../../assets/web.jpg"; // ✅ Web Development image
 
 const fadeInUp = {
@@ -37,7 +37,7 @@ const Software = () => {
             className="relative flex justify-center"
           >
             <motion.img
-              src={AD}
+              src={ad}
               alt="Application Development"
               className="rounded-[2.5rem] shadow-2xl border border-indigo-500/30 w-full max-w-3xl h-auto hover:shadow-indigo-500/60 object-cover transition-all duration-500"
               whileHover={{ scale: 1.08, rotate: 1 }}
