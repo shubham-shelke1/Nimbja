@@ -7,9 +7,10 @@ import ContactPage from "./pages/ContactPage";
 import SoftwarePage from "./pages/SoftwarePage";
 import TestingPage from "./pages/TestingPage";
 import MobilePage from "./pages/MobilePage";
-import CarrerPage from "./pages/CarrerPage";
-import Applyform from "./component/career/Applyform";
 import Ushealth from "./pages/Ushealth";
+import CarrerPage from "./pages/CarrerPage";
+import FormPage from "./pages/FormPage";
+import BlogcasePage from "./pages/BlogcasePage";
 
 function App() {
   return (
@@ -24,8 +25,11 @@ function App() {
       <Route path="/carrer" element={<CarrerPage />} />
             <Route path="/testing" element={<TestingPage />} />
       <Route path="/ushealth" element={<Ushealth />} />
+            <Route path="/form" element={<FormPage />} />
+                        <Route path="/blogcase" element={<BlogcasePage />} />
 
-            {/* <Route path="/applyform" element={<Applyform />} /> */}
+
+
 
       
       

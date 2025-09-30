@@ -89,7 +89,7 @@ export default function Career() {
 
         {/* Job Cards */}
         <motion.div
-          className="max-w-6xl mx-auto mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 lg:px-12"
+          className="max-w-7xl mx-auto mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 lg:px-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -184,3 +184,4 @@ export default function Career() {
     </div>
   );
 }
+

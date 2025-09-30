@@ -1,8 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // <-- Add this
 import techImg from "../../assets/tech.jpg";
 import case2 from "../../assets/case2.jpg";
 import case3 from "../../assets/case3.jpg";
-import { FaArrowRight } from "react-icons/fa"; // Using FontAwesome arrow icon
 
 const caseStudies = [
   {
@@ -26,6 +26,12 @@ const caseStudies = [
 ];
 
 const CaseStudy = () => {
+  const navigate = useNavigate(); // <-- initialize navigate
+
+  const handleRedirect = () => {
+    navigate("/blogcase"); // <-- make sure your route path is correct
+  };
+
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
       {/* Heading */}
@@ -45,8 +51,11 @@ const CaseStudy = () => {
             key={item.id}
             className="bg-gray-800/80 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-2xl transition duration-500 overflow-hidden group flex flex-col justify-between"
           >
-            {/* Image */}
-            <div className="relative w-full h-56 overflow-hidden">
+            {/* ✅ Clickable Image */}
+            <div
+              className="relative w-full h-56 overflow-hidden cursor-pointer"
+              onClick={handleRedirect}
+            >
               <img
                 src={item.image}
                 alt={item.title}
@@ -62,14 +71,6 @@ const CaseStudy = () => {
               <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition">
                 {item.title}
               </h3>
-              
-
-              {/* Arrow Button */}
-              <div className="flex justify-start">
-                <button className="w-10 h-10 bg-white text-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition duration-300">
-                  <FaArrowRight />
-                </button>
-              </div>
             </div>
           </div>
         ))}

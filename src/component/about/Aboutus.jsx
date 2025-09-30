@@ -1,6 +1,7 @@
 // Services.jsx
 import React from "react";
 import { motion } from "framer-motion";
+
 import RPAImg from "../../assets/rpalg.jpg";
 import support from "../../assets/support.jpg";
 import ds from "../../assets/Ds.jpg";
@@ -14,7 +15,7 @@ const servicesData = [
     title: "Robotic Process Automation (RPA)",
     subtitle: "RPA Automation",
     description:
-      "RPA is a software technology that makes it easy to build, deploy, and manage software robots that emulate human actions interacting with digital systems and software. Robotic process automation (RPA), also known as software robotics, uses automation technologies to mimic back-office tasks of human workers, such as extracting data, filling in forms, moving files, et cetera...",
+      "RPA is a software technology that makes it easy to build, deploy, and manage software robots that emulate human actions interacting with digital systems and software...",
     button: "Enroll Now",
     image: RPAImg,
   },
@@ -23,7 +24,7 @@ const servicesData = [
     title: "Maintenance & Support",
     subtitle: "Maintenance",
     description:
-      "While software support is defined as fixing broken software (or 'bugs') with reactive development, software maintenance is defined as proactive development in adding additional features...",
+      "While software support is defined as fixing broken software (or 'bugs') with reactive development, software maintenance is proactive development in adding features...",
     button: "Enroll Now",
     image: support,
   },
@@ -32,7 +33,7 @@ const servicesData = [
     title: "Data Science",
     subtitle: "Data Science",
     description:
-      "Data science is the domain of study that deals with vast volumes of data using modern tools and techniques to find unseen patterns...",
+      "Data science deals with vast volumes of data using modern tools and techniques to find unseen patterns and insights...",
     button: "Enroll Now",
     image: ds,
   },
@@ -50,7 +51,7 @@ const servicesData = [
     title: "AWS Services",
     subtitle: "AWS",
     description:
-      "Amazon Web Services is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to individuals, companies, and governments...",
+      "Amazon Web Services provides on-demand cloud computing platforms and APIs to individuals, companies, and governments...",
     button: "Enroll Now",
     image: aws,
   },
@@ -59,24 +60,30 @@ const servicesData = [
     title: "Salesforce Services",
     subtitle: "Salesforce",
     description:
-      "Salesforce Service Cloud is a customer relationship management (CRM) platform for customer service and support...",
+      "Salesforce Service Cloud is a CRM platform designed for customer service and support...",
     button: "Enroll Now",
     image: sale,
   },
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const Services = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black py-20 text-white">
-      {/* 🔵 Animated Background Glow */}
-      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-indigo-500 opacity-25 blur-3xl rounded-full animate-pulse"></div>
-      <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-purple-500 opacity-25 blur-3xl rounded-full animate-pulse"></div>
+      {/* 🔵 Soft Background Glow */}
+      <div className="absolute -top-40 -right-40 w-[400px] h-[400px] bg-indigo-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+      <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-purple-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 space-y-20">
-        {/* Section Heading */}
+        {/* 🏷️ Heading */}
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-10"
@@ -93,29 +100,31 @@ const Services = () => {
           </p>
         </motion.div>
 
-        {/* Services List */}
+        {/* 🧰 Services */}
         {servicesData.map((service, index) => (
           <motion.div
             key={service.id}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
             transition={{ duration: 0.8, delay: 0.1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.2 }}
             className={`flex flex-col lg:flex-row items-center gap-10 ${
               index % 2 === 1 ? "lg:flex-row-reverse" : ""
             }`}
           >
-            {/* Image */}
+            {/* 📸 Image */}
             <div className="lg:w-1/2 w-full overflow-hidden rounded-2xl shadow-lg">
               <motion.img
                 src={service.image}
                 alt={service.title}
+                loading="lazy" // ✅ Lazy load image
                 className="w-full h-80 object-cover transform hover:scale-105 transition-transform duration-700 rounded-2xl"
                 whileHover={{ scale: 1.05 }}
               />
             </div>
 
-            {/* Text Content */}
+            {/* 📄 Content */}
             <div className="lg:w-1/2 w-full">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 {service.title}

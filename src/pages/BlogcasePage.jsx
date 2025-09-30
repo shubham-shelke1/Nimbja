@@ -1,15 +1,16 @@
 import React from 'react'
+import Blogcase from '../component/blogcase/Blogcase'
 import Navbar from '../component/navbar/Navbar'
 import Footer from '../component/footer/Footer'
-import Career from '../component/career/Carrer'
 
-const CarrerPage = () => {
+const BlogcasePage = () => {
   return (
 <>
 <Navbar/>
-<Career/>
+<Blogcase/>
 <Footer/>
-</>  )
+</>
+)
 }
 
-export default CarrerPage
+export default BlogcasePage

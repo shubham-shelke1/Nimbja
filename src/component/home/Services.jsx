@@ -1,77 +1,64 @@
 // Services.jsx
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom"; // ✅ import Link for navigation
 
-// ✅ Import only RPA image
+// ✅ Import service images
 import rpa from "../../assets/RPA.jpg";
 import Maintaince from "../../assets/maintaince.jpg";
 import data from "../../assets/datascience.jpg";
 import ui from "../../assets/ui.jpg";
 import cloud from "../../assets/cloud.jpg";
-import cyber from "../../assets/cyber.jpg";
-
-
-
-
-
+import cyber from "../../assets/cyber.jpg"; // ✅ you forgot to import this before
 
 const services = [
-  { id: "01", title: "RPA Automation", image: rpa },
-  { id: "02", title: "Maintenance & Support",image:Maintaince },
-  { id: "03", title: "Data Science", image:data },
-  { id: "04", title: "UI/UX Design", image:ui },   
-  { id: "05", title: "Cloud Services", image:cloud },
-  { id: "06", title: "Cyber Security", image:cyber },
+  { title: "RPA Automation", image: rpa },
+  { title: "Maintenance & Support", image: Maintaince },
+  { title: "Data Science", image: data },
+  { title: "UI/UX Design", image: ui },
+  { title: "Cloud Services", image: cloud },
+  { title: "Cyber Security", image: cyber },
 ];
 
 const Services = () => {
   return (
-<section className="py-16 bg-gradient-to-r from-black via-[#375499] to-[#1b1b1c]">
+    <section className="py-14 bg-gradient-to-r from-black via-[#375499] to-[#1b1b1c]">
       {/* Heading */}
-      <div className="text-center mb-12">
-        <p className="text-white font-semibold uppercase tracking-wide text-2xl">
+      <div className="text-center mb-10">
+        <p className="text-white font-semibold uppercase tracking-wide text-xl">
           Services
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold">
-          Other IT services provided
+        <h2 className="text-3xl font-bold text-white">
+          Other IT Services Provided
         </h2>
       </div>
 
       {/* Services Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6">
-        {services.map((service) => (
-          <div
-            key={service.id}
-  className="bg-white/90 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-blue-500/40 transition-all duration-300 p-4 text-center"
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+        {services.map((service, index) => (
+          <Link
+            key={index}
+            to="/aboutus" // ✅ link to About Us page
+            className="group bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 cursor-pointer"
           >
-            {/* Number */}
-            <p className="text-blue-600 font-bold text-lg mb-4 text-left">
-              {service.id}.
-            </p>
-
-            {/* Image */}
-            <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-blue-500/30 shadow-md mb-6 bg-gray-800 flex items-center justify-center transform transition-transform duration-500 hover:rotate-6 hover:scale-110">
-              {service.image ? (
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <span className="text-gray-400 text-sm">No Image</span>
-              )}
+            {/* Image (Full Width) */}
+            <div className="w-full h-48 overflow-hidden">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
             </div>
 
-            {/* Title */}
-            <h3 className="text-lg font-semibold text-gray-800 mb-6">
-              {service.title}
-            </h3>
-
-            {/* Arrow Button */}
-            <button className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white hover:bg-blue-700 transition mx-auto shadow-md">
-              <ArrowRight size={20} />
-            </button>
-          </div>
+            {/* Content */}
+            <div className="p-5 text-center">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Empower your business with our cutting-edge {service.title} solutions tailored for modern enterprises.
+              </p>
+            </div>
+          </Link>
         ))}
       </div>
     </section>
