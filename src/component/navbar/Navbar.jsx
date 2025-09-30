@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import logo from "../../assets/logo.png";
 
@@ -11,26 +11,25 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
+  const navLinkClass = ({ isActive }) =>
+    isActive
+      ? "text-green-500 font-semibold"
+      : "text-black-600 hover:text-green-600";
+
+  const mobileNavLinkClass = ({ isActive }) =>
+    isActive
+      ? "text-green-500 font-semibold block"
+      : "block hover:text-green-600";
+
   return (
     <div className="sticky top-0 z-50 w-full bg-white shadow">
-      {/* 🔹 Top bar */}
-      {/* <div className="bg-[#2d312f] text-white flex flex-col sm:flex-row sm:items-center sm:justify-between px-4 sm:px-6 py-2 text-xs sm:text-sm space-y-2 sm:space-y-0"> */}
-        {/* Left - Contact info */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-2 sm:space-y-0">
-
-
-
-        </div>
-      {/* </div> */}
-
       {/* 🔹 Main Navbar */}
-<div className="flex items-center justify-between px-4 sm:px-6 py-3 bg-gradient-to-r from-[#006D5B] to-[#0A192F]
- text-white">
+      <div className="flex items-center justify-between px-4 sm:px-6 py-3 bg-gradient-to-r from-[#006D5B] to-[#0A192F] text-white">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <Link to="/">
+          <NavLink to="/">
             <img src={logo} alt="logo" className="h-9 sm:h-14" />
-          </Link>
+          </NavLink>
           <span className="text-white font-bold text-sm sm:text-2xl whitespace-nowrap">
             Nimbja Security Solutions Pvt Ltd
           </span>
@@ -39,9 +38,9 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center space-x-6 font-semibold">
           <li>
-            <Link to="/" className="text-black-600 hover:text-green-600">
+            <NavLink to="/" className={navLinkClass}>
               Home
-            </Link>
+            </NavLink>
           </li>
 
           <li
@@ -63,58 +62,70 @@ const Navbar = () => {
             >
               <ul className="py-2">
                 <li>
-                  <Link
+                  <NavLink
                     to="/software"
-                    className="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "block px-5 py-3 text-green-500 font-semibold"
+                        : "block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition"
+                    }
                   >
                     Software Development Application
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link
+                  <NavLink
                     to="/testing"
-                    className="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "block px-5 py-3 text-green-500 font-semibold"
+                        : "block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition"
+                    }
                   >
                     Software Testing - Manual & Automation
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link
+                  <NavLink
                     to="/mobile"
-                    className="block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "block px-5 py-3 text-green-500 font-semibold"
+                        : "block px-5 py-3 text-gray-800 hover:bg-gray-100 hover:text-blue-600 transition"
+                    }
                   >
                     Mobile Development & Testing
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
           </li>
 
           <li>
-            <Link to="/aboutus" className="hover:text-green-600">
+            <NavLink to="/aboutus" className={navLinkClass}>
               About Us
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/carrer" className="hover:text-green-600">
-              Carrer
-            </Link>
+            <NavLink to="/carrer" className={navLinkClass}>
+              Career
+            </NavLink>
           </li>
           <li>
-            <Link to="/ushealth " className="hover:text-green-600">
+            <NavLink to="/ushealth" className={navLinkClass}>
               US Health Care
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact" className="hover:text-green-600">
+            <NavLink to="/contact" className={navLinkClass}>
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
 
         {/* Hamburger (mobile only) */}
         <button
-          className="lg:hidden text-2xl text-gray-700"
+          className="lg:hidden text-2xl text-gray-200"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <HiX /> : <HiMenu />}
@@ -124,9 +135,9 @@ const Navbar = () => {
       {/* 🔹 Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden bg-white shadow-md px-4 py-4 space-y-3 font-medium">
-          <Link to="/" className="block text-blue-600">
+          <NavLink to="/" className={mobileNavLinkClass}>
             Home
-          </Link>
+          </NavLink>
 
           {/* Mobile Dropdown */}
           <button
@@ -137,30 +148,30 @@ const Navbar = () => {
           </button>
           {servicesOpen && (
             <div className="ml-4 space-y-2">
-              <Link to="/software" className="block hover:text-green-600">
+              <NavLink to="/software" className={mobileNavLinkClass}>
                 Software Development Application
-              </Link>
-              <Link to="/testing" className="block hover:text-green-600">
+              </NavLink>
+              <NavLink to="/testing" className={mobileNavLinkClass}>
                 Software Testing - Manual & Automation
-              </Link>
-              <Link to="/mobile" className="block hover:text-green-600">
+              </NavLink>
+              <NavLink to="/mobile" className={mobileNavLinkClass}>
                 Mobile Development & Testing
-              </Link>
+              </NavLink>
             </div>
           )}
 
-          <Link to="/aboutus" className="block hover:text-green-600">
+          <NavLink to="/aboutus" className={mobileNavLinkClass}>
             About Us
-          </Link>
-          <Link to="/carrer" className="block hover:text-green-600">
-            Carrier
-          </Link>
-          <Link to="/ushealth" className="block hover:text-green-600">
+          </NavLink>
+          <NavLink to="/carrer" className={mobileNavLinkClass}>
+            Career
+          </NavLink>
+          <NavLink to="/ushealth" className={mobileNavLinkClass}>
             US Health Care
-          </Link>
-          <Link to="/contact" className="block hover:text-green-600">
+          </NavLink>
+          <NavLink to="/contact" className={mobileNavLinkClass}>
             Contact
-          </Link>
+          </NavLink>
         </div>
       )}
     </div>
