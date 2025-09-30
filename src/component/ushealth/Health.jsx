@@ -75,7 +75,7 @@ const Health = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-black rounded-xl shadow-md p-6 flex flex-col justify-between hover:shadow-lg transition-shadow border border-gray-200"
+              className="bg-black  rounded-xl shadow-md p-6 flex flex-col justify-between hover:shadow-lg transition-shadow border border-gray-200"
               initial="hidden"
               whileInView="visible"
               variants={cardVariants}
