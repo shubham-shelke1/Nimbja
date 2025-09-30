@@ -59,7 +59,8 @@ const Health = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-gray-100 py-20 px-6">
+   <section className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-400 to-gray-500 text- py-20 px-6">
+
       <div className="max-w-7xl mx-auto text-center">
         <motion.h1
           initial="hidden"
@@ -74,7 +75,7 @@ const Health = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between hover:shadow-lg transition-shadow border border-gray-200"
+              className="bg-black rounded-xl shadow-md p-6 flex flex-col justify-between hover:shadow-lg transition-shadow border border-gray-200"
               initial="hidden"
               whileInView="visible"
               variants={cardVariants}
