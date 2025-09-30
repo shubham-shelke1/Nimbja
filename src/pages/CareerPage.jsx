@@ -1,9 +1,9 @@
 import React from 'react'
+import Career from '../component/career/Career'
 import Navbar from '../component/navbar/Navbar'
 import Footer from '../component/footer/Footer'
-import Career from '../component/career/Carrer'
 
-const CarrerPage = () => {
+const CareerPage = () => {
   return (
 <>
 <Navbar/>
@@ -12,4 +12,4 @@ const CarrerPage = () => {
 </>  )
 }
 
-export default CarrerPage
+export default CareerPage
