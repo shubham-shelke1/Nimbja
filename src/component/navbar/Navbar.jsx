@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-50 w-full bg-white shadow">
       {/* 🔹 Main Navbar */}
-      <div className="flex items-center justify-between px-4 sm:px-6 py-3 bg-gradient-to-r from-[#006D5B] to-[#0A192F] text-white">
+      <div className="flex items-center justify-between px-4 sm:px-6 py-2 bg-gradient-to-r from-[#006D5B] to-[#0A192F] text-white">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <NavLink to="/">
