@@ -8,21 +8,18 @@ const services = [
     title: "Improving lives technology lighthouse ...",
     date: "July 31, 2022",
     author: "Admin",
-    image: "/assets/blog1.jpg", // Put blog1.jpg in public/assets/
   },
   {
     id: 2,
     title: "Technology to Support Business",
     date: "June 29, 2022",
     author: "Admin",
-    image: "/assets/blog2.jpg", // Put blog2.jpg in public/assets/
   },
   {
     id: 3,
     title: "The Top 3 Downfalls to be Aware of.",
     date: "May 13, 2021",
     author: "Admin",
-    image: "/assets/blog3.jpg", // Put blog3.jpg in public/assets/
   },
 ];
 
