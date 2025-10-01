@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // <-- Add this
 import techImg from "../../assets/softimg.jpg";
-import case2 from "../../assets/case2.jpg";
+import case2 from "../../assets/new11.jpg";
 import case3 from "../../assets/case3.jpg";
 
 const caseStudies = [
