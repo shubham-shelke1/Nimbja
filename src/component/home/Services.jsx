@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"; 
 import rpa from "../../assets/RPA.jpg";
 import Maintaince from "../../assets/maintaince.jpg";
-import data from "../../assets/datascience.jpg";
+import data from "../../assets/data.jpg";
 import ui from "../../assets/ui.jpg";
 import cloud from "../../assets/cloud.jpg";
 import cyber from "../../assets/cyber.jpg"; 
