@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import MOBILE from "../../assets/mobile.jpg";
+import MOBILE from "../../assets/phone.jpg";
 
 const fadeInUp = {
 hidden: { opacity: 0, y: 40 },
