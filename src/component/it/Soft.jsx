@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import develope from "../../assets/develope.jpg"
-import WEB from "../../assets/web.jpg";
+import WEB from "../../assets/website.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
