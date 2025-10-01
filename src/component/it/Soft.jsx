@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import develope from "../../assets/ad.jpg"
+import develope from "../../assets/develope.jpg"
 import WEB from "../../assets/web.jpg";
 
 const fadeInUp = {
