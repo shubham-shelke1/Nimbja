@@ -4,7 +4,7 @@ import Home from '../component/home/Home'
 import Course from '../component/home/Course'
 import Creative from '../component/home/Creative'
 import Services from '../component/home/Services'
-import CaseStudy from '../component/home/CaseStudy'
+import Casestudy from '../component/home/Casestudy'
 import Testimonial from '../component/home/Testinomial'
 import Form from '../component/home/Form'
 import Footer from '../component/footer/Footer'
@@ -21,7 +21,7 @@ const HomePage = () => {
 <Year/>
 <Creative/>
 <Services/>
-<CaseStudy/>
+<Casestudy/>
 <Testimonial/>
 <Blog/>
 <Form/>
