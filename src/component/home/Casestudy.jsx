@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // <-- Add this
-import techImg from "../../assets/tech.jpg";
+import techImg from "../../assets/tech.jpg"; //vhsnges
 import case2 from "../../assets/case2.jpg";
 import case3 from "../../assets/case3.jpg";
 
