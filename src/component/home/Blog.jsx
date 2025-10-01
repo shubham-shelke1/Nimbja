@@ -1,7 +1,7 @@
 import React from "react";
-import new1 from "../../assets/blog1.jpg"; 
-import new2 from "../../assets/blog2.jpg"; // adjust path if needed
-import new3 from "../../assets/blog3.jpg"; // if you have a third image
+import new1 from "../../assets/blue1.jpg"; 
+import new2 from "../../assets/blue2.jpg"; // adjust path if needed
+import new3 from "../../assets/blue3.jpg"; // if you have a third image
 
 const blogPosts = [
   {
