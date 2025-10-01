@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion";
-import akshayImg from "../../assets/akshay.jpg"; 
+import akshayImg from "../../assets/man.jpg"; 
 import kalpanaImg from "../../assets/kalpana.jpg"; 
 
 const testimonials = [
