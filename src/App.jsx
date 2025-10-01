@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import SoftwarePage from "./pages/SoftwarePage";
-// import TestingPage from "./pages/TestingPage";
+import TestingPage from "./pages/TestingPage";
 import MobilePage from "./pages/MobilePage";
 import Ushealth from "./pages/Ushealth";
 import FormPage from "./pages/FormPage";
@@ -25,7 +25,7 @@ function App() {
         <Route path="/aboutus" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/software" element={<SoftwarePage />} />
-        {/* <Route path="/testing" element={<TestingPage />} /> */}
+        <Route path="/testing" element={<TestingPage />} />
         <Route path="/mobile" element={<MobilePage />} />
         <Route path="/carrer" element={<CareerPage />} />
         <Route path="/ushealth" element={<Ushealth />} />
