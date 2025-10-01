@@ -1,4 +1,3 @@
-// Services.jsx
 import React from "react";
 import { Link } from "react-router-dom"; 
 import rpa from "../../assets/RPA.jpg";
@@ -19,6 +18,7 @@ const services = [
 
 const Services = () => {
   return (
+
     <section className="py-14 bg-gradient-to-r from-black via-[#375499] to-[#1b1b1c]">
       {/* Heading */}
       <div className="text-center mb-10">
@@ -60,7 +60,7 @@ const Services = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services
