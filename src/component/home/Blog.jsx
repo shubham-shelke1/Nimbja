@@ -1,7 +1,7 @@
 import React from "react";
-import Blog1 from "../../assets/blog1.jpg"; 
-import Blog2 from "../../assets/blog2.jpg"; // adjust path if needed
-import Blog3 from "../../assets/blog3.jpg"; // if you have a third image
+import new1 from "../../assets/blog1.jpg"; 
+import new2 from "../../assets/blog2.jpg"; // adjust path if needed
+import new3 from "../../assets/blog3.jpg"; // if you have a third image
 
 const blogPosts = [
   {
@@ -9,21 +9,21 @@ const blogPosts = [
     title: "Improving lives technology lighthouse ...",
     date: "July 31, 2022",
     author: "Admin",
-    image: Blog1,
+    image: new1,
   },
   {
     id: 2,
     title: "Technology to Support Business",
     date: "June 29, 2022",
     author: "Admin",
-    image:Blog2,
+    image:new2,
   },
   {
     id: 3,
     title: "The Top 3 Downfalls to be Aware of.",
     date: "May 13, 2021",
     author: "Admin",
-    image: Blog3, // fallback if you have a 3rd image
+    image: new3, // fallback if you have a 3rd image
   },
 ];
 
