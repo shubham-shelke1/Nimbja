@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // <-- Add this
-import techImg from "../../assets/tech.jpg"; //vhsnges
+import techImg from "../../assets/tech.jpg"; 
 import case2 from "../../assets/case2.jpg";
 import case3 from "../../assets/case3.jpg";
 
@@ -79,4 +79,4 @@ const CaseStudy = () => {
   );
 };
 
-export default CaseStudy;
+export default CaseStudy;     
