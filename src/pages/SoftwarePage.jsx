@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../component/navbar/Navbar";
 import Footer from "../component/footer/Footer";
-import Software from "../component/it/Software";
+import Soft from "../component/it/Soft";
 
 const SoftwarePage = () => {
   return (
     <>
       <Navbar />
-      <Software />
+      <Soft />
       <Footer />
     </>
   )

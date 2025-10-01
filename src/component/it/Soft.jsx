@@ -14,7 +14,7 @@ const modalVariants = {
   exit: { opacity: 0, scale: 0.9, transition: { duration: 0.2 } },
 };
 
-const Software = () => {
+const Soft = () => {
   const [openForm, setOpenForm] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState("");
 
@@ -23,7 +23,6 @@ const Software = () => {
     alert("✅ Application Submitted Successfully!");
     setOpenForm(false);
   };
-
   return (
     <div className="relative bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white overflow-hidden">
       {/* ✨ Background Glow */}
@@ -224,4 +223,4 @@ const Software = () => {
   );
 };
 
-export default Software;
+export default Soft;
