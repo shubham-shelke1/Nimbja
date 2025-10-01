@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo.png"; // ✅ Correct logo import
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -36,21 +37,56 @@ const Footer = () => {
         </div>
 
         {/* All IT Services */}
-        <div>
-          <h3 className="text-white text-lg font-semibold mb-4">All IT Services</h3>
-          <ul className="text-sm text-gray-300 space-y-2">
-            <li>Software Applications Development</li>
-            <li>Software Testing (Manual & Automation)</li>
-            <li>Mobile Development & Testing</li>
-            <li>RPA Automation</li>
-            <li>Maintenance & Support</li>
-            <li>Data Science</li>
-            <li>Cloud Computing</li>
-            <li>AWS Services</li>
-            <li>Sales Force Services</li>
-          </ul>
-        </div>
-
+       <div>
+      <h3 className="text-white text-lg font-semibold mb-4">All IT Services</h3>
+      <ul className="text-sm text-gray-300 space-y-2">
+        <li>
+          <Link to="/software" className="hover:text-white">
+            Software Applications Development
+          </Link>
+        </li>
+        <li>
+          <Link to="/testing" className="hover:text-white">
+            Software Testing (Manual & Automation)
+          </Link>
+        </li>
+        <li>
+          <Link to="/mobile" className="hover:text-white">
+            Mobile Development & Testing
+          </Link>
+        </li>
+        <li>
+          <Link to="/aboutus" className="hover:text-white">
+            RPA Automation
+          </Link>
+        </li>
+        <li>
+          <Link to="/aboutus" className="hover:text-white">
+            Maintenance & Support
+          </Link>
+        </li>
+        <li>
+          <Link to="/aboutus" className="hover:text-white">
+            Data Science
+          </Link>
+        </li>
+        <li>
+          <Link to="/aboutus" className="hover:text-white">
+            Cloud Computing
+          </Link>
+        </li>
+        <li>
+          <Link to="/aboutus" className="hover:text-white">
+            AWS Services
+          </Link>
+        </li>
+        <li>
+          <Link to="/aboutus" className="hover:text-white">
+            Sales Force Services
+          </Link>
+        </li>
+      </ul>
+    </div>
         {/* Latest News */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-4">Latest News</h3>
