@@ -25,10 +25,9 @@ const caseStudies = [
   },
 ];
 
-const Casestudy = () => {
-    
-    const navigate = useNavigate(); // <-- initialize navigate
-    const handleRedirect = () => {
+const Study = () => {
+  const navigate = useNavigate(); // <-- initialize navigate
+  const handleRedirect = () => {
     navigate("/blogcase"); // <-- make sure your route path is correct
   };
   return (
@@ -75,7 +74,7 @@ const Casestudy = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Casestudy
+export default Study;

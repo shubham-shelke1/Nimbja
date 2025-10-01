@@ -6,10 +6,10 @@ import Creative from "../component/home/Creative";
 import Form from "../component/home/Form";
 import Footer from "../component/footer/Footer";
 import Year from "../component/home/Year";
-import Services from "../component/home/Services"; 
-import Casestudy from "../component/home/Casestudy";
+import Services from "../component/home/Services";
 import Testimonial from "../component/home/Testimonial";
 import Blog from "../component/home/Blog";
+import Study from "../component/home/Study";
 
 const HomePage = () => {
   return (
@@ -20,7 +20,7 @@ const HomePage = () => {
       <Year />
       <Creative />
       <Services />
-      <Casestudy />
+      <Study />
       <Testimonial />
       <Blog />
       <Form />
