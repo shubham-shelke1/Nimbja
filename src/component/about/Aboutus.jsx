@@ -5,6 +5,7 @@ import RPAImg from "../../assets/rpalg.jpg";
 import support from "../../assets/support.jpg";
 import ds from "../../assets/Ds.jpg";
 import cl from "../../assets/cloudd.jpg";
+
 import aws from "../../assets/Aws.jpg";
 import sale from "../../assets/sales.jpg";
 

@@ -1,9 +1,6 @@
 // Service.jsx
 import React from "react";
-import { motion } from "framer-motion"; // npm install framer-motion
-import Blog1 from "../../assets/blog1.jpg";
-import Blog2 from "../../assets/blog2.jpg";
-import Blog3 from "../../assets/blog3.jpg";
+import { motion } from "framer-motion"; // ensure installed: npm install framer-motion
 
 const services = [
   {
@@ -11,21 +8,21 @@ const services = [
     title: "Improving lives technology lighthouse ...",
     date: "July 31, 2022",
     author: "Admin",
-    image: Blog1,
+    image: "/assets/blog1.jpg", // Put blog1.jpg in public/assets/
   },
   {
     id: 2,
     title: "Technology to Support Business",
     date: "June 29, 2022",
     author: "Admin",
-    image: Blog2,
+    image: "/assets/blog2.jpg", // Put blog2.jpg in public/assets/
   },
   {
     id: 3,
     title: "The Top 3 Downfalls to be Aware of.",
     date: "May 13, 2021",
     author: "Admin",
-    image: Blog3,
+    image: "/assets/blog3.jpg", // Put blog3.jpg in public/assets/
   },
 ];
 
@@ -56,8 +53,8 @@ const Service = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              whileHover={{ scale: 1.08, rotate: 1 }}
-              className="relative group rounded-3xl overflow-hidden shadow-xl bg-white/70 backdrop-blur-lg border border-white/30 hover:shadow-2xl transition-all"
+              whileHover={{ scale: 1.05 }}
+              className="relative group rounded-3xl overflow-hidden shadow-xl bg-[rgba(255,255,255,0.7)] backdrop-blur-lg border border-[rgba(255,255,255,0.3)] hover:shadow-2xl transition-all"
             >
               {/* Image */}
               <div className="overflow-hidden">
