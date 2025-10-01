@@ -5,11 +5,11 @@ import Course from "../component/home/Course";
 import Creative from "../component/home/Creative";
 import Form from "../component/home/Form";
 import Footer from "../component/footer/Footer";
-import Blog from "../component/home/Blog";
 import Year from "../component/home/Year";
 import Services from "../component/home/Services"; 
 import Casestudy from "../component/home/Casestudy";
 import Testimonial from "../component/home/Testimonial";
+import Blog from "../component/home/Blog";
 
 const HomePage = () => {
   return (

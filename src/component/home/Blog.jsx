@@ -1,6 +1,5 @@
-// Blog.jsx
 import React from "react";
-import Blog1 from "../../assets/blog1.jpg"; // adjust path if needed
+import Blog1 from "../../assets/blog1.jpg"; 
 import Blog2 from "../../assets/blog2.jpg"; // adjust path if needed
 import Blog3 from "../../assets/blog3.jpg"; // if you have a third image
 
@@ -29,7 +28,9 @@ const blogPosts = [
 ];
 
 const Blog = () => {
+
   return (
+
     <div className="bg-blue-100 py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Heading */}
@@ -71,7 +72,7 @@ const Blog = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog
