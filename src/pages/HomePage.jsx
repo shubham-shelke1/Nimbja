@@ -9,7 +9,7 @@ import Form from "../component/home/Form";
 import Footer from "../component/footer/Footer";
 import Blog from "../component/home/Blog";
 import Year from "../component/home/Year";
-import Services from "../component/home/Services";
+import Services from "../component/home/Services"; 
 
 const HomePage = () => {
   return (
