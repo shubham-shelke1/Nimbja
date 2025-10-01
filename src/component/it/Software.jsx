@@ -26,7 +26,6 @@ const Software = () => {
 
   return (
     <div className="relative bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white overflow-hidden">
-
       {/* ✨ Background Glow */}
       <motion.div
         className="absolute -top-40 -left-40 w-[28rem] h-[28rem] bg-indigo-500 opacity-20 rounded-full blur-[120px]"
@@ -70,16 +69,16 @@ const Software = () => {
             </h2>
 
             <p className="text-base text-gray-300 mb-4">
-              Build, adapt, and scale applications quickly with our enterprise-grade
-              solutions designed for the digital era.
+              Build, adapt, and scale applications quickly with our
+              enterprise-grade solutions designed for the digital era.
             </p>
             <p className="text-sm text-gray-400 mb-4">
               We provide complete toolkits to deliver enterprise applications
               faster, reliably, and with reduced cost.
             </p>
             <p className="text-sm italic text-gray-200 mb-6">
-              Software development is the art and science of designing, coding, and
-              maintaining systems that power innovation.
+              Software development is the art and science of designing, coding,
+              and maintaining systems that power innovation.
             </p>
 
             <motion.button
@@ -133,8 +132,8 @@ const Software = () => {
               exceptional user experiences.
             </p>
             <p className="text-sm text-gray-400 mb-4">
-              From frontend to backend, our solutions are scalable, SEO-friendly,
-              and future-ready.
+              From frontend to backend, our solutions are scalable,
+              SEO-friendly, and future-ready.
             </p>
             <p className="text-sm italic text-gray-200 mb-6">
               Whether corporate sites or e-commerce stores, we deliver visually
@@ -178,9 +177,24 @@ const Software = () => {
                 Enroll in {selectedCourse}
               </h2>
               <form onSubmit={handleSubmit} className="space-y-3">
-                <input type="text" placeholder="Full Name" className="w-full p-2 border rounded text-sm" required />
-                <input type="email" placeholder="Email Address" className="w-full p-2 border rounded text-sm" required />
-                <input type="tel" placeholder="Phone Number" className="w-full p-2 border rounded text-sm" required />
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  className="w-full p-2 border rounded text-sm"
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full p-2 border rounded text-sm"
+                  required
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className="w-full p-2 border rounded text-sm"
+                  required
+                />
                 <select className="w-full p-2 border rounded text-sm" required>
                   <option value="">Select Course Type</option>
                   <option value="frontend">Frontend Development</option>
@@ -188,7 +202,11 @@ const Software = () => {
                   <option value="fullstack">Full-Stack Development</option>
                   <option value="mobile">Mobile App Development</option>
                 </select>
-                <textarea placeholder="Additional Notes" className="w-full p-2 border rounded text-sm" rows="3"></textarea>
+                <textarea
+                  placeholder="Additional Notes"
+                  className="w-full p-2 border rounded text-sm"
+                  rows="3"
+                ></textarea>
 
                 <motion.button
                   type="submit"
@@ -207,4 +225,3 @@ const Software = () => {
 };
 
 export default Software;
- 

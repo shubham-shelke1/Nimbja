@@ -5,7 +5,6 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
-import SoftwarePage from "./pages/SoftwarePage";
 import TestingPage from "./pages/TestingPage";
 import MobilePage from "./pages/MobilePage";
 import Ushealth from "./pages/Ushealth";
@@ -15,6 +14,7 @@ import BlogcasePage from "./pages/BlogcasePage";
 import ScrollToTop from "./component/ScrollToTop";
 import CareerPage from "./pages/CareerPage";
 import EnrollformPage from "./pages/EnrollformPage";
+import SoftwarePage from "./pages/SoftwarePage";
 
 function App() {
   return (
