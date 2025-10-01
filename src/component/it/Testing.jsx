@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import TESTING from "../../assets/testing.jpg";
+import TESTING from "../../assets/test.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
