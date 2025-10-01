@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ad from "../../assets/ad.jpg";
+import develope from "../../assets/ad.jpg"
 import WEB from "../../assets/web.jpg";
 
 const fadeInUp = {
@@ -49,7 +49,7 @@ const Soft = () => {
             className="flex justify-center"
           >
             <motion.img
-              src={ad}
+              src={develope}
               alt="Application Development"
               className="rounded-2xl shadow-xl border border-indigo-500/30 w-full max-w-md h-auto hover:shadow-indigo-500/60 object-cover transition-all duration-500"
               whileHover={{ scale: 1.05 }}
