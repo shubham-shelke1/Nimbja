@@ -26,12 +26,11 @@ const caseStudies = [
 ];
 
 const Casestudy = () => {
-  const navigate = useNavigate(); // <-- initialize navigate
-
-  const handleRedirect = () => {
+    
+    const navigate = useNavigate(); // <-- initialize navigate
+    const handleRedirect = () => {
     navigate("/blogcase"); // <-- make sure your route path is correct
   };
-
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
       {/* Heading */}
@@ -76,7 +75,7 @@ const Casestudy = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Casestudy;
+export default Casestudy
