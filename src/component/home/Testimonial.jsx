@@ -1,8 +1,8 @@
-// Testimonial.jsx
+import React from 'react'
 import React from "react";
 import { motion } from "framer-motion";
-import akshayImg from "../../assets/akshay.jpg"; // ✅ replace with real image
-import kalpanaImg from "../../assets/kalpana.jpg"; // ✅ replace with real image
+import akshayImg from "../../assets/akshay.jpg"; 
+import kalpanaImg from "../../assets/kalpana.jpg"; 
 
 const testimonials = [
   {
@@ -35,6 +35,7 @@ const fadeUp = {
 
 const Testimonial = () => {
   return (
+
     <section className="py-20 bg-gray-500">
       {/* Heading */}
       <div className="text-center mb-16">
@@ -95,7 +96,7 @@ const Testimonial = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Testimonial;
+export default Testimonial
